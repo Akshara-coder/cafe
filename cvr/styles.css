@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #a6a17c;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.top-bar {
+  background: #400000;
+  color: white;
+  padding: 5px 15px;
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #801a1a;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo, .logo-right {
+  width: 100px;
+  height: auto;
+}
+
+.title {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+header small {
+  font-size: 0.75rem;
+}
+
+nav {
+  background: #5a0000;
+}
+
+.main-nav {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.main-nav li {
+  position: relative;
+}
+
+.main-nav a {
+  display: block;
+  color: white;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  background: #b30000;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background: #7b1d1d;
+  top: 100%;
+  left: 0;
+  list-style: none;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #801a1a; /* Maroon base */
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
+  z-index: 10;
+  padding: 10px 0;
+}
+
+/* Reveal submenu on hover */
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* Dropdown links */
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #801a1a;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  border-bottom: 1px solid #a67272;
+}
+
+/* Hover effect: pop + color shift */
+.submenu a:hover {
+  background-color: #a60000; /* Brighter maroon */
+  transform: scale(1.05);    /* Pop effect */
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  background: #fff;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  padding: 10px;
+}
+
+.slider-container img {
+  width: 100%;
+  max-width: 550px; /* Slightly increased size */
+  height: auto;
+  scroll-snap-align: start;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.news-box, .welcome-box, .search-box, .sidebar-box,
+.placements-box, .courses-box, .achievements-box {
+  background: #f6f6e8;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.news-box h3,
+.welcome-box h3,
+.search-box h3,
+.placements-box h3,
+.courses-box h3,
+.achievements-box h3 {
+  background: #d6d6b5;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.news-box ul,
+.placements-box ul,
+.courses-box ul,
+.achievements-box ul {
+  list-style: none;
+}
+
+.news-box li,
+.placements-box li,
+.courses-box li,
+.achievements-box li {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 8px;
+}
+
+.search-box button {
+  width: 100%;
+  padding: 6px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+footer {
+  background: #400000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
