@@ -1,0 +1,44 @@
+/* Base Setup */
+body {
+  margin: 0;
+  background-color: #111;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Container styling */
+.outer-container {
+  width: 600px;
+  height: 400px;
+  background-color: #333;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sliding box */
+.inner-box {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: diagonalSlide 4s infinite ease-in-out alternate;
+}
+
+/* Keyframes for diagonal movement */
+@keyframes diagonalSlide {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: calc(100% - 80px);
+    left: calc(100% - 80px);
+  }
+}
