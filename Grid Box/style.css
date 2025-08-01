@@ -1,0 +1,42 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff0f5;
+  margin: 0;
+  padding: 2em;
+  text-align: center;
+}
+
+h1 {
+  color: #ff69b4;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 1em;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1em;
+  padding: 1em;
+}
+
+.grid-box {
+  background-color: #ffe4e1;
+  border-radius: 12px;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.grid-box:hover {
+  transform: scale(1.05);
+  background-color: #ffb6c1;
+}
+
+.grid-box img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.5em;
+}
